@@ -1,0 +1,29 @@
+$nomention
+$nomention
+$nomention
+$nomention
+$onlyAdmin[❌ Solo admins pueden usar esto.]
+$argsCheck[1;❌ Uso correcto: `cn!eliminar-vehículo (número)`]
+
+$onlyIf[$isNumber[$message[1]]==true;❌ Debes escribir un número entre 1 y 5.]
+$onlyIf[$message[1]>=1;❌ Mínimo 1.]
+$onlyIf[$message[1]<=5;❌ Máximo 5.]
+
+$onlyIf[$getUserVar[registro$message[1]]==1;❌ No hay vehículo en esa posición.]
+
+$setUserVar[registro$message[1];0]
+$setUserVar[rut$message[1];No Existe]
+$setUserVar[nombre$message[1];Sin definir]
+$setUserVar[apellido$message[1];Sin definir]
+$setUserVar[marca$message[1];Sin definir]
+$setUserVar[modelo$message[1];Sin definir]
+$setUserVar[color$message[1];Sin definir]
+$setUserVar[matricula$message[1];Sin definir]
+$setUserVar[año$message[1];Sin definir]
+$setUserVar[reg-vehicular$message[1];Sin definir]
+$setUserVar[roblox$message[1];Sin definir]
+$setUserVar[fecha$message[1];Sin definir]
+
+$title[✅ Vehículo Eliminado]
+$description[Vehículo en la posición $message[1] ha sido eliminado correctamente.]
+$color[FF0000]
