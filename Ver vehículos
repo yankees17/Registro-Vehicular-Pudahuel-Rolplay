@@ -1,0 +1,26 @@
+$nomention
+$nomention
+$nomention
+$nomention
+
+$argsCheck[2;❌ Uso correcto: `cn!vervehículo (número-registro) (@usuario)`]
+
+$onlyIf[$isNumber[$message[1]]==true;❌ El número debe ser entre 1 y 5.]
+$onlyIf[$message[1]>=1;❌ El mínimo es 1.]
+$onlyIf[$message[1]<=5;❌ El máximo es 5.]
+
+$onlyIf[$getUserVar[registro$message[1];$mentioned[1;yes]]==1;❌ El usuario no tiene un vehículo en esa posición.]
+
+$title[🚗 Vehículo $message[1]]
+$addField[Propietario:;<@$mentioned[1;yes]>]
+$addField[Nombre completo:;$getUserVar[nombre$message[1];$mentioned[1;yes]] $getUserVar[apellido$message[1];$mentioned[1;yes]]]
+$addField[RUT:;$getUserVar[rut$message[1];$mentioned[1;yes]]]
+$addField[Marca:;$getUserVar[marca$message[1];$mentioned[1;yes]]]
+$addField[Modelo:;$getUserVar[modelo$message[1];$mentioned[1;yes]]]
+$addField[Color:;$getUserVar[color$message[1];$mentioned[1;yes]]]
+$addField[Matrícula:;$getUserVar[matricula$message[1];$mentioned[1;yes]]]
+$addField[Año:;$getUserVar[año$message[1];$mentioned[1;yes]]]
+$addField[Registro Vehicular:;$getUserVar[reg-vehicular$message[1];$mentioned[1;yes]]]
+$addField[ID Roblox:;$getUserVar[roblox$message[1];$mentioned[1;yes]]]
+$addField[Fecha de registro:;$getUserVar[fecha$message[1];$mentioned[1;yes]]]
+$color[$random[100000;999999]]
